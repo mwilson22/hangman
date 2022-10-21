@@ -39,7 +39,7 @@ def display_hangman(fail_count, dashes_letters, guesses):
     """Show the incorrect guess total and the partial word with dashes
        next to the hangman picture"""
     os.system('clear')
-    print("\n            * HANGMAN *")
+    print("\n            HANGMAN")
     print(hangman_pic[fail_count])
     print('\033[5;12H', get_attempts_str(fail_count))
 
@@ -102,7 +102,7 @@ def play():
             display_hangman(fail_count, dashes_letters, guesses)
 
             if dashes_letters == word:
-                print("          You win!")
+                print("                    You win!")
                 break
             if fail_count == MAX_GUESSES:
                 print(f"Out of guesses :o(  The word was \'{word}\'\n")
